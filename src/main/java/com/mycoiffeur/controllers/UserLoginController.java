@@ -12,6 +12,11 @@ public class UserLoginController {
 @Autowired
     private UserRepo userRepo;
 
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String HelloUser(){
+
+        return "Hello";
+    }
     @RequestMapping(value = "/SignUp", method = RequestMethod.POST)
     public void SingUp(@RequestBody User user){
         userRepo.save(user);
