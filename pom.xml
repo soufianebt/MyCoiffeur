@@ -10,6 +10,7 @@
     </parent>
     <groupId>com.mycoiffeur</groupId>
     <artifactId>Mycoiffeur</artifactId>
+    <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>Mycoiffeur</name>
     <description>Mycoiffeur</description>
