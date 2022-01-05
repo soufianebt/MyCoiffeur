@@ -12,18 +12,24 @@ public class UserLoginController {
 @Autowired
     private UserRepo userRepo;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String HelloUser(){
+    @GetMapping(value = "/")
+    public String helloUser(){
 
         return "Hello";
     }
-    @RequestMapping(value = "/SignUp", method = RequestMethod.POST)
-    public void SingUp(@RequestBody User user){
-        userRepo.save(user);
+    @PostMapping(value = "/SignUp")
+    public ResponseEntity<String> singUp(@RequestBody User user){
+        try{
+            //TODO : check user if existed
+            userRepo.save(user);
+        return new ResponseEntity<>("Created Successfully",HttpStatus.OK);
+    }catch (Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    @RequestMapping(value = "/SignUp/{id}", method = RequestMethod.GET)
-    public ResponseEntity<User> SingUp(@PathVariable String id){
+    @GetMapping(value = "/SignUp/{id}")
+    public ResponseEntity<User> singUp(@PathVariable String id){
         try {
             User user ;
             user = userRepo.findUserByUserId(id).get();

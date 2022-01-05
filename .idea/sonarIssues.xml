@@ -3,7 +3,17 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$MAVEN_REPOSITORY$/org/springframework/spring-context/5.3.13/spring-context-5.3.13.jar!/org/springframework/context/ApplicationContextException.class">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/MycoiffeurApplication.java">
           <value>
             <set />
           </value>
@@ -14,6 +24,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/mycoiffeur/MycoiffeurApplicationTests.java">
           <value>
             <set />
           </value>
