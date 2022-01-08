@@ -1,15 +1,22 @@
 package com.mycoiffeur.modele;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import org.springframework.context.annotation.Bean;
+
+import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document("Coiffeur")
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+@Document("Coiffure")
 public class Coiffure extends User {
     private Boolean compteIsVAlide;
     private Boolean isAvailable;
+
+    public Coiffure(String userId, String firstName, String lastName, String email, String passWord, String address, String userType, Boolean compteIsVAlide, Boolean isAvailable) {
+        super(userId, firstName, lastName, email, passWord, address, userType);
+        this.compteIsVAlide = compteIsVAlide;
+        this.isAvailable = isAvailable;
+    }
 
 
 }
