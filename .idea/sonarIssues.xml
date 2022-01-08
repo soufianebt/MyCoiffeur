@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$MAVEN_REPOSITORY$/org/springframework/spring-context/5.3.13/spring-context-5.3.13.jar!/org/springframework/context/ApplicationContextException.class">
           <value>
             <set />
@@ -18,12 +23,42 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/controllers/UserController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/controllers/UserLoginController.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/Client.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/Coiffure.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/repository/ClientRepo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/repository/CoiffeurRepo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/repository/UserRepo.java">
           <value>
             <set />
           </value>

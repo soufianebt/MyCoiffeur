@@ -1,13 +1,20 @@
 package com.mycoiffeur.modele;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@AllArgsConstructor
-@Document("Client")
-public class Client {
-    private Float X_label;
-    private  Float Y_Label;
 
+@Data
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+@Document("Client")
+public class Client extends  User{
+    private Float xLabel;
+    private  Float yLabel;
+
+    public Client(String userId, String firstName, String lastName, String email, String passWord, String address, String userType, Float xLabel, Float yLabel) {
+        super(userId, firstName, lastName, email, passWord, address, userType);
+        this.xLabel = xLabel;
+        this.yLabel = yLabel;
+    }
 }
