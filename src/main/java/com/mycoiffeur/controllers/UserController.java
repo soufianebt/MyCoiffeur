@@ -2,13 +2,17 @@ package com.mycoiffeur.controllers;
 
 import com.mycoiffeur.modele.Client;
 import com.mycoiffeur.modele.Coiffure;
+import com.mycoiffeur.modele.Identifier;
 import com.mycoiffeur.modele.User;
 import com.mycoiffeur.repository.ClientRepo;
 import com.mycoiffeur.repository.CoiffeurRepo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Optional;
 
@@ -19,9 +23,11 @@ public class UserController {
     @Autowired
     private ClientRepo clientRepo;
 
-    @GetMapping(value = "/")
-    public String helloUser(){
+        Logger logger =  LoggerFactory.getLogger(UserController.class);
 
+
+    @RequestMapping("/")
+    public String firstPage() {
         return "Hello";
     }
     @PostMapping(value = "/SignUp")
@@ -44,6 +50,7 @@ public class UserController {
 
         return new ResponseEntity<>("Created Successfully",HttpStatus.OK);
     }catch (Exception e){
+            logger.error(e.toString());
             return new ResponseEntity<>(e.toString(),HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -61,6 +68,29 @@ public class UserController {
             }
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (Exception e) {
+            logger.error(e.toString());
+            return new ResponseEntity<>( HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping(value = "/SignIn")
+    public ResponseEntity<User> SignIn(@RequestBody Identifier identifier){
+
+        try {
+            Optional<Client> client = Optional.ofNullable(clientRepo.findByEmail(identifier.getEmail()).orElse(null));
+            Optional<Coiffure> coiffure = Optional.ofNullable(coiffeurRepo.findByEmail(identifier.getEmail()).orElse(null));
+            if (client.isPresent()) {
+                //TODO: Check password
+                logger.info("Client found");
+                return new ResponseEntity<>(client.get(), HttpStatus.OK);
+            }else if(coiffure.isPresent()){
+                //TODO: Check password
+                logger.info("coiffure found");
+                return new ResponseEntity<>(coiffure.get(), HttpStatus.OK);
+            }
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            logger.error(e.toString());
             return new ResponseEntity<>( HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
