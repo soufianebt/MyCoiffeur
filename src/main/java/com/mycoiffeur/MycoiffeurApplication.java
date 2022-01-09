@@ -1,7 +1,7 @@
 package com.mycoiffeur;
 
 import com.mycoiffeur.modele.Coiffure;
-import com.mycoiffeur.repository.CoiffeurRepo;
+import com.mycoiffeur.repository.CoiffureRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Optional;
 
 @SpringBootApplication
@@ -19,7 +21,7 @@ import java.util.Optional;
 @EnableSwagger2
 public class MycoiffeurApplication {
     @Autowired
-    private CoiffeurRepo coiffeurRepo ;
+    private CoiffureRepo coiffureRepo ;
 
 
     public static void main(String[] args) {
@@ -44,9 +46,11 @@ public class MycoiffeurApplication {
 //
 //
 //            coiffeurRepo.save(coiffure);
-//            Optional<Coiffure> coiffure1 = coiffeurRepo.findByEmail("DLJFDKFJDKJFDKJ");
-//            System.out.println("---- getting clientgfgf----"+"\n"
-//            +coiffure1.get().toString());
+            Iterable<String> iterable
+                    = Arrays.asList("2", "2");
+            Iterable<Coiffure> coiffure1 = coiffureRepo.findAllByEmail(iterable);
+           coiffure1.forEach(coiffure ->  System.out.println("---- getting clientgfgf----"+"\n"
+                   +coiffure.toString()));
         };
     }
 
