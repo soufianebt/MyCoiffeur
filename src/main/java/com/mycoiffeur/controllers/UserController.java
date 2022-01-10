@@ -2,7 +2,7 @@ package com.mycoiffeur.controllers;
 
 import com.mycoiffeur.modele.Client;
 import com.mycoiffeur.modele.Coiffure;
-import com.mycoiffeur.modele.Identifier;
+import com.mycoiffeur.modele.LoginIdentifier;
 import com.mycoiffeur.modele.User;
 import com.mycoiffeur.repository.ClientRepo;
 import com.mycoiffeur.repository.CoiffureRepo;
@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.security.SecureRandom;
 import java.util.Optional;
@@ -83,13 +82,13 @@ public class UserController {
     }
 
     @PostMapping(value = "/SignIn")
-    public ResponseEntity<User> signIn(@RequestBody Identifier identifier){
+    public ResponseEntity<User> signIn(@RequestBody LoginIdentifier loginIdentifier){
 
         try {
-            Optional<Client> client = Optional.ofNullable(clientRepo.findByEmail(identifier.getEmail()).orElse(null));
-            Optional<Coiffure> coiffure = Optional.ofNullable(coiffureRepo.findByEmail(identifier.getEmail()).orElse(null));
+            Optional<Client> client = Optional.ofNullable(clientRepo.findByEmail(loginIdentifier.getEmail()).orElse(null));
+            Optional<Coiffure> coiffure = Optional.ofNullable(coiffureRepo.findByEmail(loginIdentifier.getEmail()).orElse(null));
             if (client.isPresent()) {
-                if(identifier.getPassWord().equals(client.get().getPassWord())){
+                if(loginIdentifier.getPassWord().equals(client.get().getPassWord())){
                     logger.info("Client found");
                     Client modifiedClient = client.get();
                     modifiedClient.setPassWord("");
@@ -99,7 +98,7 @@ public class UserController {
                     return new ResponseEntity<>( HttpStatus.UNAUTHORIZED);
                 }
             }else if(coiffure.isPresent()){
-                if(identifier.getPassWord().equals(coiffure.get().getPassWord())) {
+                if(loginIdentifier.getPassWord().equals(coiffure.get().getPassWord())) {
                     logger.info("coiffure found");
                     Coiffure modifiedCoiffure = coiffure.get();
                     modifiedCoiffure.setPassWord("");
