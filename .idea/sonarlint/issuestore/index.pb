@@ -22,7 +22,11 @@ U
 %.github/workflows/main_mycoiffure.yml,3\f\3f3a7ce3ad995148a0380af5a1dac1d0cffebd72
 b
 2src/main/java/com/mycoiffeur/modele/PostImage.java,d\b\db0e1585fd43b57819d48a5d00a0706ed6024a9a
-a
-1src/main/java/com/mycoiffeur/modele/Services.java,e\d\ed9374c9181fc5d7e950063e095305fa4dcd4302
+_
+/src/main/java/com/mycoiffeur/modele/Client.java,e\e\ee973af40228286fd03b245dafe0ab321e92776f
 g
-7src/main/java/com/mycoiffeur/repository/ReviewRepo.java,3\8\38772643c82c5e0d49d5e9ff33427ec24fb75629
+7src/main/java/com/mycoiffeur/repository/ClientRepo.java,e\8\e8d82ba0ceb3cb07afe34b95b4440dd8313e69b4
+]
+-src/main/java/com/mycoiffeur/modele/User.java,2\2\2280c355d9eb711fdca8e9fd4b1bcb960c1b25c0
+]
+-src/main/java/com/mycoiffeur/modele/Post.java,a\a\aa1e7f85044080133e599d150eca9d7a4e251383

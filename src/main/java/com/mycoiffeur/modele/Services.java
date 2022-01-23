@@ -15,6 +15,7 @@ import java.util.Date;
 @Setter
 public class Services {
     @Id
+    private String serviceId;
     private String coiffureId;
     private String name;
     private String description;

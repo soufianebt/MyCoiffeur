@@ -34,8 +34,6 @@ public class ProfileController {
     public ResponseEntity<String> createProfile(@RequestBody OperationIdentifier userId) {
 
         try {
-
-
             if (userId.getUserId().equals(null) || userId.getUserId().equals("")) {
                 return new ResponseEntity<>("You must Specified UserId", HttpStatus.NO_CONTENT);
             }
