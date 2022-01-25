@@ -20,8 +20,6 @@ g
 7src/main/java/com/mycoiffeur/repository/ClientRepo.java,e\8\e8d82ba0ceb3cb07afe34b95b4440dd8313e69b4
 ]
 -src/main/java/com/mycoiffeur/modele/User.java,2\2\2280c355d9eb711fdca8e9fd4b1bcb960c1b25c0
-g
-7src/main/java/com/mycoiffeur/MycoiffeurApplication.java,5\1\51407e784483e6c2fa9658b130cb34be4860f615
 h
 8src/main/java/com/mycoiffeur/modele/LoginIdentifier.java,f\2\f2c8038ddd3c70d52bbee768088973627a00528c
 i

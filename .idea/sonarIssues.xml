@@ -28,6 +28,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/controllers/FileUploadController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/controllers/PostController.java">
           <value>
             <set />
@@ -118,6 +123,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/StorageFileNotFoundException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/StorageService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/User.java">
           <value>
             <set />
@@ -164,6 +179,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/repository/UserRepo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/storage/FileSystemStorageService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/storage/FileUploadController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/storage/StorageFileNotFoundException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/storage/StorageProperties.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/storage/StorageService.java">
           <value>
             <set />
           </value>
