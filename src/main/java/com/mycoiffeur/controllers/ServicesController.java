@@ -67,6 +67,40 @@ logger.info("User "+Id+ " trying to add service");
             return new ResponseEntity<>( HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+
+    @PutMapping(value = "/Services")
+    public ResponseEntity<String> UpdateCoiffureServices(@RequestBody Services services){
+        try {
+            Optional<Coiffure> coiffure= Optional.ofNullable(coiffureRepo.findById(services.getCoiffureId())).orElse(null);
+
+            if (coiffure.isPresent()) {
+                logger.info("Service added");
+                servicesRepo.save(services);
+                return new ResponseEntity<>("Service added Successfully", HttpStatus.OK);
+            }else {
+                logger.info("coiffure not exist");
+                return new ResponseEntity<>( HttpStatus.NOT_FOUND);
+            }
+        } catch (Exception e) {
+            logger.error(e.toString());
+            return new ResponseEntity<>( HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @DeleteMapping(value = "/Services/{SserviceId}")
+    public ResponseEntity<String> DeleteCoiffureServices(@PathVariable String serviceId){
+        try {
+                logger.info("Deleted Successfully");
+                servicesRepo.deleteById(serviceId);
+                return new ResponseEntity<>( HttpStatus.OK);
+
+        } catch (Exception e) {
+            logger.error(e.toString());
+            return new ResponseEntity<>( HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     public String generateServiceId(){
         return  RandomStringUtils.random(10, 0, 0, true, true, null, new SecureRandom());
     }

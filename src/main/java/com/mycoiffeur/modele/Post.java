@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 @Document("Post")
 @Data
 @AllArgsConstructor
@@ -15,8 +15,11 @@ import java.util.List;
 @Setter
 public class Post {
     @Id
-    private String id;
+    private String PostId;
     private Date dateOfPost;
+    private String coiffureId;
+    private String description;
     private String postType;
     private ArrayList<Comments> listOfComment;
+    private String url;
 }

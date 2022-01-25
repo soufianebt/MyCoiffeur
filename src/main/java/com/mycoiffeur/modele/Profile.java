@@ -15,6 +15,9 @@ import java.util.List;
 public class Profile {
     @Id
     private String userId;
-    private List<Post> coiffureList;
+    private List<Post> coiffurePostsList;
+    public void addPost(Post post){
+        this.coiffurePostsList.add(post);
+    }
 
 }

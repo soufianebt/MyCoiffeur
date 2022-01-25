@@ -1,11 +1,9 @@
 package com.mycoiffeur.controllers;
 
-import com.mycoiffeur.modele.Client;
-import com.mycoiffeur.modele.Coiffure;
-import com.mycoiffeur.modele.LoginIdentifier;
-import com.mycoiffeur.modele.User;
+import com.mycoiffeur.modele.*;
 import com.mycoiffeur.repository.ClientRepo;
 import com.mycoiffeur.repository.CoiffureRepo;
+import com.mycoiffeur.repository.ProfileRepo;
 import org.apache.commons.lang.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,13 +21,16 @@ public class UserController {
     private CoiffureRepo coiffureRepo;
     @Autowired
     private ClientRepo clientRepo;
+    @Autowired
+    private ProfileRepo profileRepo;
 
         Logger logger =  LoggerFactory.getLogger(UserController.class);
 
 
     @RequestMapping("/")
     public String firstPage() {
-        return "Hello";
+        return "Hello " +
+                "Go To <a href=\"./swagger-ui.html\"> Link </a> To see documentation ";
     }
 
     @PostMapping(value = "/SignUp")
@@ -37,18 +38,20 @@ public class UserController {
         try{
             Optional<Coiffure> coiffure = Optional.ofNullable(coiffureRepo.findByEmail(user.getEmail()).orElse(null));
             Optional<Client> client = Optional.ofNullable(clientRepo.findByEmail(user.getEmail()).orElse(null));
-
+            String userId = generateUserId();
             if(coiffure.isPresent() || client.isPresent()){
                         return new ResponseEntity<>("user already exist",HttpStatus.ALREADY_REPORTED);
             }
             if(user.getUserType().equals("Client")){
-
-                clientRepo.save(new Client(generateUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),user.getUserType(),0f, 0f));
+                clientRepo.save(new Client(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),user.getUserType(),0f, 0f));
             }else if(user.getUserType().equals("Coiffure")){
-                coiffureRepo.save(new Coiffure(generateUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),user.getUserType(),false, false));
+                coiffureRepo.save(new Coiffure(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),user.getUserType(),false, false));
+                Profile profile = new Profile();
+                profile.setUserId(userId);
+                profileRepo.save(profile);
             }else{
-                logger.info("Please specify the type");
-                return new ResponseEntity<>("Please specify the type",HttpStatus.EXPECTATION_FAILED);
+                logger.info("Unspecified type Coiffure, Client");
+                return new ResponseEntity<>("Unspecified type Coiffure, Client",HttpStatus.EXPECTATION_FAILED);
             }
             logger.info("Created Successfully");
         return new ResponseEntity<>("Created Successfully",HttpStatus.OK);
@@ -116,9 +119,8 @@ public class UserController {
     }
 
 
-    @PostMapping(value = "/UserUpdate")
+    @PutMapping(value = "/UserUpdate")
     public ResponseEntity<String> UpdateUser(@RequestBody User user) {
-
         try {
             if(user.getUserId() == null){
                 return new ResponseEntity<>("You must Specified UserId",HttpStatus.NO_CONTENT);
@@ -129,12 +131,15 @@ public class UserController {
             if (coiffure.isPresent() || client.isPresent()) {
                 if(user.getUserType().equals("Client")){
                     logger.info("Updated Successfully");
-                    clientRepo.save(new Client(user.getUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),user.getUserType(),0f, 0f));
+                    clientRepo.save(new Client(user.getUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), client.get().getPassWord(), user.getAddress(),user.getUserType(),0f, 0f));
                     return new ResponseEntity<>("Updated Successfully",HttpStatus.OK);
                 }else if(user.getUserType().equals("Coiffure")){
                     logger.info("Updated Successfully");
-                    coiffureRepo.save(new Coiffure(user.getUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),user.getUserType(),false, false));
+                    coiffureRepo.save(new Coiffure(user.getUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), coiffure.get().getPassWord(), user.getAddress(),user.getUserType(),false, false));
                     return new ResponseEntity<>("Updated Successfully",HttpStatus.OK);
+                }else{
+                    logger.info("Specified type Coiffure, Client");
+                    return new ResponseEntity<>("Specified type Coiffure, Client",HttpStatus.NOT_FOUND);
                 }
             }
             return new ResponseEntity<>("Client Not found",HttpStatus.NOT_FOUND);
