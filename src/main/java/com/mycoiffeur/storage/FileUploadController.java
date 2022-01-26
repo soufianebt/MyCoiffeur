@@ -44,11 +44,10 @@ public class FileUploadController {
     @PostMapping("/files")
     public String handleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
+       String storagepath =  storageService.store(file);
 
-       String storedpath =  storageService.store(file);
 
-
-        return storedpath;
+        return storagepath;
     }
 
     @ExceptionHandler(StorageFileNotFoundException.class)
