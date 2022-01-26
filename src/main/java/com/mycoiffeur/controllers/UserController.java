@@ -42,16 +42,16 @@ public class UserController {
             if(coiffure.isPresent() || client.isPresent()){
                         return new ResponseEntity<>("user already exist",HttpStatus.ALREADY_REPORTED);
             }
-            if(user.getUserType().equals("Client")){
-                clientRepo.save(new Client(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),user.getUserType(),0f, 0f));
-            }else if(user.getUserType().equals("Coiffure")){
-                coiffureRepo.save(new Coiffure(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),user.getUserType(),false, false));
+            if(user.getUserType().equals(UserType.CLIENT)){
+                clientRepo.save(new Client(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),UserType.CLIENT,0f, 0f));
+            }else if(user.getUserType().equals(UserType.COIFFURE)){
+                coiffureRepo.save(new Coiffure(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),UserType.COIFFURE,false, false));
                 Profile profile = new Profile();
                 profile.setUserId(userId);
                 profileRepo.save(profile);
             }else{
-                logger.info("Unspecified type Coiffure, Client");
-                return new ResponseEntity<>("Unspecified type Coiffure, Client",HttpStatus.EXPECTATION_FAILED);
+                logger.info("Unspecified type COIFFURE, CLIENT");
+                return new ResponseEntity<>("Unspecified type COIFFURE, CLIENT",HttpStatus.EXPECTATION_FAILED);
             }
             logger.info("Created Successfully");
         return new ResponseEntity<>("Created Successfully",HttpStatus.OK);
@@ -129,17 +129,25 @@ public class UserController {
             Optional<Coiffure> coiffure = Optional.ofNullable(coiffureRepo.findById(user.getUserId()).orElse(null));
             Optional<Client> client = Optional.ofNullable(clientRepo.findById(user.getUserId()).orElse(null));
             if (coiffure.isPresent() || client.isPresent()) {
-                if(user.getUserType().equals("Client")){
+                if(client.isPresent()){
                     logger.info("Updated Successfully");
-                    clientRepo.save(new Client(user.getUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), client.get().getPassWord(), user.getAddress(),user.getUserType(),0f, 0f));
+                    Client client1 = client.get();
+                    client1.setAddress(user.getAddress());
+                    client1.setFirstName(user.getFirstName());
+                    client1.setLastName(user.getLastName());
+                    clientRepo.save(client1);
                     return new ResponseEntity<>("Updated Successfully",HttpStatus.OK);
-                }else if(user.getUserType().equals("Coiffure")){
+                }else if(coiffure.isPresent()){
+                    Coiffure coiffure1 = coiffure.get();
+                    coiffure1.setFirstName(user.getFirstName());
+                    coiffure1.setLastName(user.getLastName());
+                    coiffure1.setAddress(user.getAddress());
                     logger.info("Updated Successfully");
-                    coiffureRepo.save(new Coiffure(user.getUserId(), user.getFirstName(), user.getLastName(), user.getEmail(), coiffure.get().getPassWord(), user.getAddress(),user.getUserType(),false, false));
+                    coiffureRepo.save(coiffure1);
                     return new ResponseEntity<>("Updated Successfully",HttpStatus.OK);
                 }else{
-                    logger.info("Specified type Coiffure, Client");
-                    return new ResponseEntity<>("Specified type Coiffure, Client",HttpStatus.NOT_FOUND);
+                    logger.info("Specified type COIFFURE, CLIENT");
+                    return new ResponseEntity<>("Specified type COIFFURE, CLIENT",HttpStatus.NOT_FOUND);
                 }
             }
             return new ResponseEntity<>("Client Not found",HttpStatus.NOT_FOUND);

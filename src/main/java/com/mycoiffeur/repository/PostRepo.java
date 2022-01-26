@@ -5,5 +5,5 @@ import com.mycoiffeur.modele.Services;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface PostRepo extends MongoRepository<Post, String> {
-    Iterable<Post> findAllByCoiffureId(String email);
+    Iterable<Post> findAllByProfileId(String email);
 }

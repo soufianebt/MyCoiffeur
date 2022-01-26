@@ -13,11 +13,10 @@ import java.util.List;
 @Setter
 @ToString
 public class Profile {
+    /**
+     * the userId is the coiffureId*/
     @Id
     private String userId;
-    private List<Post> coiffurePostsList;
-    public void addPost(Post post){
-        this.coiffurePostsList.add(post);
-    }
+
 
 }

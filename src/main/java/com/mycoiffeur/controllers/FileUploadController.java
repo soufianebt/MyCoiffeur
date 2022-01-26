@@ -1,7 +1,9 @@
-package com.mycoiffeur.storage;
+package com.mycoiffeur.controllers;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
+import com.mycoiffeur.storage.StorageFileNotFoundException;
+import com.mycoiffeur.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -21,7 +23,7 @@ public class FileUploadController {
         this.storageService = storageService;
     }
 
-    @GetMapping("/files")
+    @GetMapping("/Files")
     public Model listUploadedFiles(Model model) throws IOException {
 
         model.addAttribute("files", storageService.loadAll().map(
@@ -32,7 +34,7 @@ public class FileUploadController {
         return model;
     }
 
-    @GetMapping("/files/{filename:.+}")
+    @GetMapping("/Files/{filename:.+}")
     @ResponseBody
     public ResponseEntity<Resource> serveFile(@PathVariable String filename) {
 
@@ -41,7 +43,7 @@ public class FileUploadController {
                 "attachment; filename=\"" + file.getFilename() + "\"").body(file);
     }
 
-    @PostMapping("/files")
+    @PostMapping("/Files")
     public String handleFileUpload(@RequestParam("file") MultipartFile file,
                                    RedirectAttributes redirectAttributes) {
        String storagepath =  storageService.store(file);

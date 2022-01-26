@@ -12,7 +12,7 @@ public class Coiffure extends User {
     private Boolean compteIsVAlide;
     private Boolean isAvailable;
 
-    public Coiffure(String userId, String firstName, String lastName, String email, String passWord, String address, String userType, Boolean compteIsVAlide, Boolean isAvailable) {
+    public Coiffure(String userId, String firstName, String lastName, String email, String passWord, String address, UserType userType, Boolean compteIsVAlide, Boolean isAvailable) {
         super(userId, firstName, lastName, email, passWord, address, userType);
         this.compteIsVAlide = compteIsVAlide;
         this.isAvailable = isAvailable;

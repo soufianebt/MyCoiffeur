@@ -15,11 +15,10 @@ import java.util.Date;
 @Setter
 public class Post {
     @Id
-    private String PostId;
+    private String postId;
     private Date dateOfPost;
-    private String coiffureId;
+    private String profileId;
     private String description;
-    private String postType;
-    private ArrayList<Comments> listOfComment;
-    private String url;
+    private PostType postType;
+    private String imageUrl;
 }

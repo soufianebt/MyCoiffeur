@@ -45,7 +45,7 @@ public class ProfileController {
                 }
                 if (coiffure.isPresent()) {
                     logger.info("Profile created successfully");
-                    profileRepo.save(new Profile(userId.getUserId(), new ArrayList<Post>()));
+                    profileRepo.save(new Profile(userId.getUserId()));
                     return new ResponseEntity<>(" Successfully", HttpStatus.OK);
                 }
                 logger.warn("Coiffure Not found");
