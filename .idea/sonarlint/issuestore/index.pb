@@ -20,12 +20,8 @@ h
 8src/main/java/com/mycoiffeur/modele/LoginIdentifier.java,f\2\f2c8038ddd3c70d52bbee768088973627a00528c
 i
 9src/main/java/com/mycoiffeur/repository/CoiffureRepo.java,f\c\fce7a03a20aaf0a2c1584c35b821a5729301df37
-g
-7src/main/java/com/mycoiffeur/repository/ReviewRepo.java,3\8\38772643c82c5e0d49d5e9ff33427ec24fb75629
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-_
-/src/main/java/com/mycoiffeur/modele/Review.java,6\2\6275d03a896c544368c618ea011e7f78a869527c
 h
 8src/main/java/com/mycoiffeur/repository/ProfileRepo.java,7\f\7f0875c1d39226fcc2ddbeb4ea090d53d036c23a
 l

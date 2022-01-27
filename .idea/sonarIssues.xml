@@ -53,6 +53,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/controllers/ReviewController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/controllers/ServiceController.java">
           <value>
             <set />
@@ -133,6 +138,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/Review.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/modele/Services.java">
           <value>
             <set />
@@ -194,6 +204,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/repository/ProfileRepo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/repository/ReviewRepo.java">
           <value>
             <set />
           </value>
