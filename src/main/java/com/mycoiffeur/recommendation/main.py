@@ -1,3 +1,7 @@
+pip install dnspython
+pip install pymongo
+pip install pandas
+
 import pandas as pd
 import time
 import json
