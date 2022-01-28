@@ -168,6 +168,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/python/recommendation.py">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/recommendation/ScriptRun.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/recommendation/ScrtiptRun.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/recommendation/main.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/repository/ClientRepo.java">
           <value>
             <set />
@@ -219,6 +239,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/repository/UserRepo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/seeds/ClientSeeds.java">
           <value>
             <set />
           </value>

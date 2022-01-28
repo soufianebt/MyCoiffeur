@@ -1,6 +1,7 @@
 package com.mycoiffeur.controllers;
 
 import com.mycoiffeur.modele.*;
+import com.mycoiffeur.recommendation.ScriptRun;
 import com.mycoiffeur.repository.ClientRepo;
 import com.mycoiffeur.repository.CoiffureRepo;
 import com.mycoiffeur.repository.ProfileRepo;
@@ -12,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.Optional;
 
@@ -28,7 +30,13 @@ public class UserController {
 
 
     @RequestMapping("/")
-    public String firstPage() {
+    public String firstPage() throws IOException {
+        logger.info(System.getProperty("user.dir"));
+        try {
+            ScriptRun.runScript();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return "Hello " +
                 "Go To <a href=\"./swagger-ui.html\"> Link </a> To see documentation ";
     }
