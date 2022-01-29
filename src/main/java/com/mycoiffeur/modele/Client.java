@@ -5,11 +5,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 
 @Data
-@EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @Document("Client")
-@Setter
-@Getter
 public class Client extends  User{
     private Float xLabel;
     private  Float yLabel;

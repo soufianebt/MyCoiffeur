@@ -7,8 +7,6 @@ import lombok.Setter;
 
 @Data
 @AllArgsConstructor
-@Getter
-@Setter
 public class LoginIdentifier {
     private String email;
     private String passWord;

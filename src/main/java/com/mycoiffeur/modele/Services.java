@@ -11,8 +11,7 @@ import org.springframework.format.number.money.MonetaryAmountFormatter;
 import java.util.Date;
 @Data
 @AllArgsConstructor
-@Getter
-@Setter
+
 public class Services {
     @Id
     private String serviceId;

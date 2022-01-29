@@ -31,12 +31,6 @@ public class UserController {
 
     @RequestMapping("/")
     public String firstPage() throws IOException {
-        logger.info(System.getProperty("user.dir"));
-        try {
-            ScriptRun.runScript();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return "Hello " +
                 "Go To <a href=\"./swagger-ui.html\"> Link </a> To see documentation ";
     }

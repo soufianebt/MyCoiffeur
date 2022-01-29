@@ -6,10 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("Comments")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
+
 public class Comments {
     @Id
     private String commentId;

@@ -5,7 +5,6 @@ import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @Document("Coiffure")
 public class Coiffure extends User {
