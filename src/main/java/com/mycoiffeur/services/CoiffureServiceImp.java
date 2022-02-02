@@ -24,4 +24,15 @@ public class CoiffureServiceImp implements CoiffureService{
     public Optional<Coiffure> getCoiffeureById(String coiffeurId) {
         return this.coiffureRepo.findById(coiffeurId);
     }
+
+    @Override
+    public void editeCoiffeur(Coiffure coiffure) {
+        Coiffure coiffure1 = this.coiffureRepo.findById(coiffure.getUserId()).get();
+        coiffure1.setCompteIsVAlide(coiffure.getCompteIsVAlide());
+        coiffure1.setIsAvailable(coiffure.getIsAvailable());
+        coiffure1.setTele(coiffure.getTele());
+        coiffure1.setImageUrl(coiffure.getImageUrl());
+        coiffure1.setWaitTime(coiffure.getWaitTime());
+        this.coiffureRepo.save(coiffure1);
+    }
 }

@@ -9,9 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
@@ -20,6 +18,7 @@ import java.util.Optional;
 public class CoiffureController {
     private final CoiffureService coiffureService;
     private final Logger logger = LoggerFactory.getLogger(CoiffureController.class);
+
     @GetMapping(value ="/coiffure")
     public ResponseEntity<Iterable<Coiffure>> getCoiffures(){
         try {
@@ -31,6 +30,7 @@ public class CoiffureController {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
     @GetMapping(value ="/coiffure/{coiffeurId}")
     public ResponseEntity<Coiffure> getCoiffure(@PathVariable String coiffeurId){
         try {
@@ -43,6 +43,23 @@ public class CoiffureController {
             }else{
                 logger.info("return a recommendation");
                 return new ResponseEntity(HttpStatus.NOT_FOUND);
+            }
+        } catch(Exception e){
+            logger.error(e.toString());
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PutMapping(value ="/coiffure")
+    public ResponseEntity<String> putCoiffure(@RequestBody Coiffure coiffure){
+        try {
+            if(coiffure.getUserId().equals("") || coiffure.getUserId().equals(null)){
+
+                return new ResponseEntity("Request param CoiffeurId is Empty", HttpStatus.EXPECTATION_FAILED);
+            }else{
+                logger.info("Coiffeur edited");
+                this.coiffureService.editeCoiffeur(coiffure);
+                return new ResponseEntity("Coiffeur edited", HttpStatus.OK);
             }
         } catch(Exception e){
             logger.error(e.toString());

@@ -143,6 +143,7 @@ public class UserController {
                     coiffure1.setFirstName(user.getFirstName());
                     coiffure1.setLastName(user.getLastName());
                     coiffure1.setAddress(user.getAddress());
+                    coiffure1.setCompteIsVAlide(true);
                     logger.info("Updated Successfully");
                     coiffureRepo.save(coiffure1);
                     return new ResponseEntity<>("Updated Successfully",HttpStatus.OK);
