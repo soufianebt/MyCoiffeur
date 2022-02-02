@@ -1,0 +1,24 @@
+
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÔ–áüÿÿÿÿ
+[
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(ÀÔ–áüÿÿÿÿ
+•
+java:S2159#"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(éÃÊÕüÿÿÿÿ
+V	java:S125*"<This block of commented-out lines of code should be removed.(ªŒÈƒüÿÿÿÿ
+c	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÇÆ
+o
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(ˆ»½°
+o
+java:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(‹§¼“
+o
+java:S22936"YReplace the type specification in this constructor call with the diamond operator ("<>").(§ëë
+o
+java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(œôÈ«
+o
+java:S2293I"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ó‡Èî
+m
+java:S11929"WDefine a constant instead of duplicating this literal "The coiffure not found" 3 times.(ÿêõ
+t
+java:S11922"_Define a constant instead of duplicating this literal "The post inserted successfully" 3 times.(®Ğ?
+_
+java:S2583#"DChange this condition so that it does not always evaluate to "false"(éÃÊÕüÿÿÿÿ
