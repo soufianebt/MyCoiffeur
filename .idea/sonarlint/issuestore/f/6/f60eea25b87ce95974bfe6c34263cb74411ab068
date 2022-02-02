@@ -1,0 +1,14 @@
+
+‰
+java:S1130!"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(¢ñÒÿ8¹Â–ê/
+[
+java:S4684'"@Replace this persistent entity with a simple POJO or DTO object.(×©ëîÿÿÿÿÿ
+c	java:S100}"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¨Ê¹
+V
+java:S4684}"@Replace this persistent entity with a simple POJO or DTO object.(Ÿ¨Ê¹
+`
+java:S1128"DRemove this unused import 'com.mycoiffeur.recommendation.ScriptRun'.(ˆÇ8£Ã–ê/
+q
+java:S1192‡"UDefine a constant instead of duplicating this literal "Updated Successfully" 4 times.(úá»‚ùÿÿÿÿ
+_
+java:S2583"CChange this condition so that it does not always evaluate to "true"(ÍñúÀüÿÿÿÿ

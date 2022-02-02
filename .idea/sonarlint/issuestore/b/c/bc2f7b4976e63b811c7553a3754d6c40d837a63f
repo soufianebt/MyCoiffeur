@@ -1,0 +1,14 @@
+
+M
+java:S1135"2Complete the task associated to this TODO comment.(ˆ€òÌúÿÿÿÿ
+\
+java:S3457""AFormat specifiers should be used instead of string concatenation.(‰§è˜þÿÿÿÿ
+c	java:S100I"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«¥‡©
+o	java:S100\"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’º¦“üÿÿÿÿ8öÏÑ·è/
+h
+java:S1128"FRemove this unused import 'com.mycoiffeur.modele.OperationIdentifier'.(Ø½ç‚øÿÿÿÿ8ÃãÌ·è/
+U
+java:S1128"3Remove this unused import 'java.security.Provider'.(×„áãøÿÿÿÿ8ÄãÌ·è/
+f	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÿ¹Œ
+R
+java:S2629""7Use the built-in formatting to construct this argument.(‰§è˜þÿÿÿÿ
