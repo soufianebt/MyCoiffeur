@@ -2,6 +2,9 @@ package com.mycoiffeur.services;
 
 import com.mycoiffeur.modele.Coiffure;
 
+import java.util.Optional;
+
 public interface CoiffureService {
-    public Iterable<Coiffure> getCoiffures();
+    Iterable<Coiffure> getCoiffures();
+    Optional<Coiffure> getCoiffeureById(String coiffeurId);
 }

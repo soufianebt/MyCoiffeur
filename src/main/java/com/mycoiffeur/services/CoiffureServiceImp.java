@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @AllArgsConstructor
 public class CoiffureServiceImp implements CoiffureService{
@@ -17,5 +19,9 @@ public class CoiffureServiceImp implements CoiffureService{
             coiffure.setPassWord("");
         });
         return coiffures;
+    }
+
+    public Optional<Coiffure> getCoiffeureById(String coiffeurId) {
+        return this.coiffureRepo.findById(coiffeurId);
     }
 }

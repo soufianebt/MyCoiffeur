@@ -47,7 +47,7 @@ public class UserController {
             if(user.getUserType().equals(UserType.CLIENT)){
                 clientRepo.save(new Client(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),UserType.CLIENT,0f, 0f));
             }else if(user.getUserType().equals(UserType.COIFFURE)){
-                coiffureRepo.save(new Coiffure(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),UserType.COIFFURE,false, false));
+                coiffureRepo.save(new Coiffure(userId, user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassWord(), user.getAddress(),UserType.COIFFURE,false, false,"","",""));
                 Profile profile = new Profile();
                 profile.setUserId(userId);
                 profileRepo.save(profile);
@@ -127,7 +127,6 @@ public class UserController {
             if(user.getUserId() == null){
                 return new ResponseEntity<>("You must Specified UserId",HttpStatus.NO_CONTENT);
             }
-
             Optional<Coiffure> coiffure = Optional.ofNullable(coiffureRepo.findById(user.getUserId()).orElse(null));
             Optional<Client> client = Optional.ofNullable(clientRepo.findById(user.getUserId()).orElse(null));
             if (coiffure.isPresent() || client.isPresent()) {

@@ -1,13 +1,0 @@
-
-L
-java:S3740<"/Provide the parametrized type for this generic.(ûËˆñ8Õ…ÙÂé/
-h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«þ¼µþÿÿÿÿ
-[
-java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(«þ¼µþÿÿÿÿ
-h	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÔ¥Çøÿÿÿÿ
-t
-java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓÇ¶úýÿÿÿÿ
-o
-java:S2293*"YReplace the type specification in this constructor call with the diamond operator ("<>").(Çªƒð
-t
-java:S2293/"YReplace the type specification in this constructor call with the diamond operator ("<>").(õÛ©©ýÿÿÿÿ

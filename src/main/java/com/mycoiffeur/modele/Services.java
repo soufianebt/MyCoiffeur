@@ -19,8 +19,6 @@ public class Services {
     private String name;
     private String description;
     private Float price;
-
-    //TODO : Change delay to time
-    private Date delay;
+    private String delay;
 
 }
