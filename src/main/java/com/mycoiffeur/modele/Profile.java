@@ -9,7 +9,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Profile {
     /**
      * the userId is the coiffureId*/

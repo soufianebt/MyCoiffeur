@@ -48,7 +48,7 @@ logger.info("User "+Id+ " trying to add service");
         }
     }
 
-   @PostMapping(value = "/Services")
+    @PostMapping(value = "/Services")
     public ResponseEntity<String> addCoiffureServices(@RequestBody Services services){
         try {
             Optional<Coiffure> coiffure= Optional.ofNullable(coiffureRepo.findById(services.getCoiffureId())).orElse(null);

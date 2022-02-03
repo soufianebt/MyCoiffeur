@@ -1,6 +1,7 @@
 package com.mycoiffeur.controllers;
 
 
+import com.mycoiffeur.recommendation.ScriptRun;
 import com.mycoiffeur.services.RecommendationService;
 import lombok.AllArgsConstructor;
 import org.bson.BsonDocument;
@@ -25,8 +26,17 @@ public class RecommendationController {
     public ResponseEntity<Document> getRecommendation(@PathVariable String profileId){
         try {
             Document document = recommendationService.getRecommendation(profileId);
-            logger.info("return a recommendation");
             return new ResponseEntity(document, HttpStatus.OK);
+        } catch(Exception e){
+            logger.error(e.toString());
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @GetMapping(value ="/recommendation")
+    public ResponseEntity<String> generateRecommendation(){
+        try {
+            ScriptRun.runScript();
+            return new ResponseEntity("SUCCESS", HttpStatus.OK);
         } catch(Exception e){
             logger.error(e.toString());
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);

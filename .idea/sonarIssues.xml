@@ -28,6 +28,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/controllers/ClientController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/controllers/CoiffureController.java">
           <value>
             <set />
@@ -259,6 +264,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/seeds/ClientSeeds.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/services/ClientService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/services/ClientServiceImp.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/mycoiffeur/services/ClinetService.java">
           <value>
             <set />
           </value>
