@@ -1,7 +1,3 @@
-pip install dnspython
-pip install pymongo
-pip install pandas
-
 import pandas as pd
 import time
 import json
@@ -35,11 +31,11 @@ if __name__ == '__main__':
         coiffeurI_corr = item_corr_matrix[index]
         coiffeurI_corr = coiffeurI_corr.sort_values(ascending=False)
         coiffeurI_corr.dropna(inplace=True)
-        coiffeurs_similar_to_coiffeur4 = pd.DataFrame(data=coiffeurI_corr.values, columns=['Correlation'],
+        coiffeurs_similar_to_coiffeurI = pd.DataFrame(data=coiffeurI_corr.values, columns=['Correlation'],
                                                       index=coiffeurI_corr.index)
-        coiffeurs_similar_to_coiffeur4 = coiffeurs_similar_to_coiffeur4.join(
+        coiffeurs_similar_to_coiffeurI = coiffeurs_similar_to_coiffeurI.join(
             pd.DataFrame(data= 100 - df.isna().sum(), columns=['total ratings'], index=coiffeurI_corr.index))
-        similar = coiffeurs_similar_to_coiffeur4[(coiffeurs_similar_to_coiffeur4['Correlation'] > 0)].sort_values(
+        similar = coiffeurs_similar_to_coiffeurI[(coiffeurs_similar_to_coiffeurI['Correlation'] > 0)].sort_values(
             ascending=False, by=['Correlation'])
         similar = similar.to_dict()
         similar['_id'] = index
