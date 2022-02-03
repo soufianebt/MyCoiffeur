@@ -1,11 +1,11 @@
 package com.mycoiffeur.recommendation;
 
-import com.mycoiffeur.controllers.CommentsConroller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-
+@Service
 public class ScriptRun  {
     public static void runScript() throws IOException {
         Logger logger = LoggerFactory.getLogger(ScriptRun.class);
