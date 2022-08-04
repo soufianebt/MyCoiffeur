@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".interfaces.LoginScreenActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Créez un compte"
+        android:gravity="center"
+
+        android:textColor="@color/black"
+        android:textSize="25dp"
+
+        />
+
+
+    <EditText
+        android:id="@+id/upemail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="Entrer votre e-mail"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/get_started_newcount_cadr_edit_text"
+        />
+    <EditText
+        android:id="@+id/uppassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="Password"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:background="@drawable/get_started_newcount_cadr_edit_text"
+        />
+    <EditText
+        android:id="@+id/upconfirme_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="Confirm password"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:background="@drawable/get_started_newcount_cadr_edit_text"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coiffeur"
+            />
+        <CheckBox
+            android:id="@+id/checkbox_coiffeur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Client"
+            />
+        <CheckBox
+            android:id="@+id/checkbox_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+    </LinearLayout>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/upinscription"
+        android:layout_width="match_parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_height="50dp"
+        android:text="Inscription"
+        android:textAllCaps="false"
+        android:background="@drawable/get_started_newcount_edit_text"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:elevation="20dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:text="OU"
+
+        android:textColor="@color/black"
+        android:textSize="16dp"
+
+        />
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_icons8_logo_google"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_gravity="center"
+            android:text="Compte de Google "
+
+            android:textColor="@color/black"
+            android:layout_marginLeft="8dp"
+            android:textSize="12dp"
+            android:layout_marginRight="16dp"
+
+            />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_icons8_facebook_entour_"
+            android:layout_marginLeft="8dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_gravity="center"
+            android:text="Compte de Facebook"
+            android:layout_marginLeft="8dp"
+
+            android:textColor="@color/black"
+            android:textSize="12dp"
+
+            />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="60dp"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Vous avez déjà un compte?"
+        android:gravity="center"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+
+        />
+    <TextView
+        android:id="@+id/textbtn_connexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Connexion"
+        android:gravity="center"
+        android:textStyle="bold"
+
+
+        android:textColor="@color/c_get_signup"
+        android:textSize="16dp"
+
+        />
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".interfaces.WelcomeScreenActivity"
+    
+    android:orientation="vertical"
+
+    >
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@drawable/ic_barber_cuate"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Bienvenue"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Découvrez les meilleurs coiffeurs de votre villeet \nprenez un rendez-vous."
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textColor="@color/black"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_create_new_account"
+        android:layout_width="match_parent"
+        android:layout_marginTop="84dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="50dp"
+        android:text="Créez un nouveau compte"
+        android:textAllCaps="false"
+        android:background="@drawable/get_started_newcount_edit_text"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:elevation="20dp"
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_connexion"
+        android:layout_width="match_parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="50dp"
+        android:text="Connexion"
+        android:textAllCaps="false"
+        android:background="@drawable/get_started_newcount_cadr_edit_text"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:elevation="20dp"
+
+        />
+
+
+
+
+
+</LinearLayout>

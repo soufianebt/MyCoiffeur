@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".interfaces.ProfileForClient">
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_marginRight="100dp"
+            android:layout_marginLeft="120dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+
+
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_more_horiz_24"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="80dp"
+                    app:cardCornerRadius="60dp"
+                    android:layout_marginLeft="5dp"
+
+                    android:elevation="4dp"
+
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/c_get_signup"
+
+                    android:layout_height="80dp">
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="-80dp"
+                    android:layout_width="80dp"
+                    app:cardCornerRadius="60dp"
+
+                    android:elevation="4dp"
+
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/c_get_signup"
+
+                    android:layout_height="80dp">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/primg"
+
+                        android:layout_width="80dp"
+                        android:src="@drawable/profileimg"
+
+
+                        android:layout_height="80dp"
+
+
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berrachdi Mohamed"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:id="@+id/profileName_c"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/indiceImageDisponiblite"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_brightness_1_24"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Disponible"
+                        android:textSize="16dp"
+
+                        android:id="@+id/disponibilite_c"
+                        android:textColor="@color/white_icon"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+
+
+
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rue france N 12, Agdal, Rabat"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/contact_coiffeur_c"
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="1dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+
+
+
+                        android:layout_gravity="center"
+
+
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_gravity="center"
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_phone_iphone_24"
+                                />
+                            <TextView
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Contacter le coiffeur"
+                                android:layout_marginRight="50dp"
+                                android:layout_marginLeft="50dp"
+                                android:textColor="@color/black"
+                                />
+
+                            <ImageView
+                                android:layout_gravity="center"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                                />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/gotomaps_c"
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="1dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+
+
+
+                        android:layout_gravity="center"
+
+
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_gravity="center"
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_location_on_24"
+                                />
+                            <TextView
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="L'adresse du coiffeur"
+                                android:layout_marginRight="50dp"
+                                android:layout_marginLeft="50dp"
+                                android:textColor="@color/black"
+                                />
+
+                            <ImageView
+                                android:layout_gravity="center"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                                />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+
+
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="25dp"
+                        android:id="@+id/show_coiffeur_post_c"
+                        app:cardElevation="1dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+
+
+
+
+                        android:layout_gravity="center"
+
+
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_gravity="center"
+
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_filter_none_24"
+                                />
+                            <TextView
+                                android:gravity="center"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Les posts du coiffeur    "
+                                android:layout_marginRight="40dp"
+                                android:layout_marginLeft="40dp"
+                                android:textColor="@color/black"
+                                />
+
+                            <ImageView
+                                android:layout_gravity="center"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                                />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/recommendation_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Les coiffeurs similaires"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_recommend_24"
+                        />
+
+
+
+
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_view_recomendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+                <!--androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Afficher mes posts"
+                    android:id="@+id/create_post"
+
+                    android:textAllCaps="false"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    /-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Afficher mes travaux recents"
+
+
+                    android:textAllCaps="false"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:visibility="gone"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Ajouter un rendez vous"
+
+
+                    android:textAllCaps="false"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    />
+
+
+
+
+
+
+
+
+            </LinearLayout>
+            <!--Add Comment et Reviews-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Les reviews sur le coiffeur"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    />
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_feedback_24"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+               android:gravity="left"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Evaluer le coiffeur :"
+
+                    android:layout_marginRight="20dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/c_get_signup"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_star_outline_24"
+
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_star_outline_24"
+
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_star_outline_24"
+
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_star_outline_24"
+
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_baseline_star_outline_24"
+
+                    />
+
+
+            </LinearLayout>
+            <!--List des reviews-->
+            <include
+
+                layout="@layout/comment_add_item"
+                android:id="@+id/item_feedback_add_comment"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycle_view_feedback"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

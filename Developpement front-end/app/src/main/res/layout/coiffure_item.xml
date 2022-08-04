@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_coiffeur"
+
+        android:layout_width="match_parent"
+
+        android:elevation="5dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                app:cardCornerRadius="60dp"
+                android:elevation="4dp"
+                android:layout_gravity="left"
+                app:cardBackgroundColor="@color/c_get_signup"
+                android:layout_height="50dp">
+
+                <ImageView
+
+                    android:layout_gravity="center"
+                    android:id="@+id/coiffure_img"
+
+                    android:layout_width="50dp"
+                    android:src="@drawable/profileimg"
+
+
+                    android:layout_height="50dp"
+
+
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/firstlasttname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soufiane boutahiri"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="16dp"
+
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white_icon"
+                        android:text=". Annance"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/coiffure_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cut, Shower, .."
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/c_get_signup"
+                    />
+                <TextView
+
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rue 12. N23, Skhirate"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14dp"
+
+                    android:textColor="@color/c_get_signup"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_baseline_star_rate_24"
+                        />
+
+                    <TextView
+                        android:id="@+id/coiffeur_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.7 (2)"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+
+                        android:textColor="@color/c_get_signup"
+                        />
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

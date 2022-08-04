@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="50dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginLeft="10dp"
+
+
+
+            android:elevation="4dp"
+            app:cardBackgroundColor="@color/c_get_signup"
+            android:layout_height="50dp">
+
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="50dp"
+            app:cardCornerRadius="20dp"
+
+            android:layout_marginLeft="-55dp"
+            android:elevation="4dp"
+
+
+            app:cardBackgroundColor="@color/c_get_signup"
+
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/itemimg_comment"
+
+                android:layout_width="50dp"
+                android:src="@drawable/profileimg"
+
+
+                android:layout_height="50dp"
+
+
+                />
+
+
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/firstlastname_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mohamed berrachdi"
+                android:layout_marginLeft="30dp"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:id="@+id/content_comment"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:text="I'm watching your every single video, even I don't need to because I know pretty much about Android development but I love watching your videos, your way of explaination and small details are always rocks"
+                android:layout_marginLeft="30dp"
+                android:textSize="12dp"
+
+                />
+
+            <TextView
+                android:id="@+id/note_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Evaluation: 3/5"
+                android:layout_marginLeft="30dp"
+                android:textSize="12dp"
+                android:gravity="right"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/c_get_signup"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/black"/>
+
+
+
+
+
+
+</LinearLayout>
