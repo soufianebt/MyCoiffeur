@@ -6,9 +6,13 @@
 
 ## Solution 
 
+## Technologies utilisées
+
+|  <img src="Images/Postman.png" width="80px">  | <img src="Images/swagger.png" width="80px"> | <img src="Images/git.png" width="80px"> |<img src="Images/GithubCI.png" width="80px"> |<img src="Images/Azure.png" width="80px"> |<img src="Images/mongo.png" width="80px"> |<img src="Images/python.png" width="80px"> |<img src="Images/springboot.png" width="80px"> |<img src="Images/XML.png" width="80px"> 
 
 
 ##  Les interfaces utilisateur
+
     Création d’un compte utilisateur de type Client. L’utilisateur détermine le type de compte à créer, soit Coiffeur soit Client.
 
 | sign up du client       | logIn du client |
